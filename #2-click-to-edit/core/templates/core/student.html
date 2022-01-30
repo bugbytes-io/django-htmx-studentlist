@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div id="student-details">
+    {% include 'core/partials/student-details.html' %}
+</div>
+
+<a href="{% url 'index' %}">Students</a>
+
+{% endblock %}

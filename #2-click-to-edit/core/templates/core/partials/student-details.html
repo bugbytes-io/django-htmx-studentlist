@@ -1,0 +1,7 @@
+<h1>{{ student.name }}</h1>
+<p>{{ student.subject }}</p>
+<p>{{ student.date_of_birth }}</p>
+
+<button class="btn btn-primary"
+    hx-get="{% url 'student-edit-form' student.id %}"
+    hx-target="#student-details">Edit</button>

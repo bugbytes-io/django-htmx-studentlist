@@ -1,0 +1,23 @@
+{% for student in page_obj %} 
+
+<tr>
+    <td>
+        <a href="{% url 'student-detail' student.id %}">
+            {{ student.name }}</td>
+        </a>
+    <td>{{ student.subject }}</td>
+    <td>{{ student.date_of_birth }}</td>
+</tr>
+
+{% endfor %}
+
+{% if page_obj.has_next %}
+    <tr id="load-more">
+        <td colspan="3" class="text-center">
+            <button class="btn btn-primary"
+                    hx-get="{% url 'index' %}?page={{page_obj.next_page_number}}"
+                    hx-target="#load-more"
+                    hx-swap="outerHTML">Load More</button>
+        </td>
+    </tr>
+{% endif %}
