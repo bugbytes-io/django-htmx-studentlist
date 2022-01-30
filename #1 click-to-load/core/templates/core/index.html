@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% include 'core/partials/list.html' %}
+    </tbody>
+</table>
+
+{% endblock %}
